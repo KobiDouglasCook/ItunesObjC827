@@ -8,10 +8,12 @@
 
 #import "GridViewController.h"
 #import "AlbumCollectionCell.h"
+#import "ViewModel.h"
 
 @interface GridViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *gridCollectionView;
+@property (strong, nonatomic) ViewModel * viewModel;
 
 @end
 

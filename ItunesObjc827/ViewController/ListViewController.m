@@ -8,11 +8,12 @@
 
 #import "ListViewController.h"
 #import "AlbumTableCell.h"
+#import "ViewModel.h"
 
 @interface ListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
-
+@property (strong, nonatomic) ViewModel * viewModel;
 
 
 @end

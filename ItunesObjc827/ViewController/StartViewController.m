@@ -19,12 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setupStart];
+    //TODO: Add Search Bar & Dependency Injection for ViewModel
 }
 
 - (IBAction)switchButtonTapped:(id)sender {
     [self.listContainer setHidden: ![self.listContainer isHidden]];
     [self.gridContainer setHidden: ![self.gridContainer isHidden]];
+}
+
+-(void)setupStart {
+    self.viewModel = [ViewModel new]; //var viewModel = ViewModel()
+    [self.viewModel getAlbums:@"Michael+Jackson"];
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046C7D82234D227A00DCE447 /* ItuneService.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C7D81234D227A00DCE447 /* ItuneService.m */; };
 		04EB0702234BC3C200517EA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB0701234BC3C200517EA1 /* AppDelegate.m */; };
 		04EB0705234BC3C200517EA1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB0704234BC3C200517EA1 /* StartViewController.m */; };
 		04EB0708234BC3C200517EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EB0706234BC3C200517EA1 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046C7D80234D227A00DCE447 /* ItuneService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItuneService.h; sourceTree = "<group>"; };
+		046C7D81234D227A00DCE447 /* ItuneService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItuneService.m; sourceTree = "<group>"; };
 		04EB06FD234BC3C200517EA1 /* ItunesObjc827.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesObjc827.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EB0700234BC3C200517EA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04EB0701234BC3C200517EA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 		04EB0719234BC3E400517EA1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				046C7D80234D227A00DCE447 /* ItuneService.h */,
+				046C7D81234D227A00DCE447 /* ItuneService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				04EB0710234BC3C300517EA1 /* main.m in Sources */,
 				04EB0722234BC60900517EA1 /* GridViewController.m in Sources */,
 				04EB072E234BCECF00517EA1 /* Album.m in Sources */,
+				046C7D82234D227A00DCE447 /* ItuneService.m in Sources */,
 				04EB071F234BC60200517EA1 /* ListViewController.m in Sources */,
 				04EB0702234BC3C200517EA1 /* AppDelegate.m in Sources */,
 			);

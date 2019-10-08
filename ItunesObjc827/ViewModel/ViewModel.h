@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<ViewModelDelegate> delegate; //weak var delegate: ViewModelDelegate?
 @property (nonatomic, strong) NSMutableArray<Album*>* albums; //var albums = [Album]
--(void)getAlbums; //func getAlbums()
+-(void)getAlbums:(NSString*) artistName; //func getAlbums()
 
 
 @end

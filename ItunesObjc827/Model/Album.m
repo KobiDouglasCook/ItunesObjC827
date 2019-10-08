@@ -10,4 +10,27 @@
 
 @implementation Album
 
+- (id)configureWith:(NSDictionary *)dict {
+    
+    if ([super init]) {
+        
+        NSString *name = [dict objectForKey:@"collectionName"];
+        NSString *artwork = [dict objectForKey:@"artworkUrl100"];
+        NSString *artist = [dict objectForKey:@"artistName"];
+        int collectionId = [[dict objectForKey: @"collectionId"] intValue];
+        double price = [[dict objectForKey: @"collectionPrice"] doubleValue];
+        
+        self.name = name;
+        self.artworkUrl = artwork;
+        self.artist = artist;
+        self.uid = collectionId;
+        self.price = price;
+        
+    }
+    
+    return self;
+}
+
+
+
 @end

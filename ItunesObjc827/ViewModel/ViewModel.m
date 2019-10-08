@@ -7,12 +7,17 @@
 //
 
 #import "ViewModel.h"
+#import "ItuneService.h"
 
 @implementation ViewModel
 
 
-- (void)getAlbums {
-    //TODO: Setup Service Layer
+- (void)getAlbums:(NSString*) artistName {
+    [ItuneService.sharedInstance getAlbumsFor:artistName completion:^(NSMutableArray<Album *> * _Nonnull albums) {
+        __weak ViewModel * weakSelf; //[weak self] - capture list of weak self - Swift
+        weakSelf.albums = albums;
+        NSLog(@"Album Count: %lu", albums.count);
+    }];
 }
 
 
