@@ -21,13 +21,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSl-jL-2oG">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
-                                    <segue destination="ACW-BT-ahy" kind="embed" id="IbN-dP-E93"/>
+                                    <segue destination="ACW-BT-ahy" kind="embed" identifier="ListSegue" id="IbN-dP-E93"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-VT-YCS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
-                                    <segue destination="ICq-XG-TSi" kind="embed" id="SmC-L1-itU"/>
+                                    <segue destination="ICq-XG-TSi" kind="embed" identifier="GridSegue" id="SmC-L1-itU"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -150,6 +150,7 @@
                             <constraint firstAttribute="bottom" secondItem="uTQ-vf-GGP" secondAttribute="bottom" id="j1e-bJ-JNO"/>
                             <constraint firstItem="uTQ-vf-GGP" firstAttribute="leading" secondItem="ghn-Ff-rCY" secondAttribute="leading" id="qhv-qd-lz2"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="g71-Ec-hyw"/>
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="uTQ-vf-GGP" id="gEX-Ze-XUa"/>
@@ -226,6 +227,7 @@
                             <constraint firstItem="HRt-IW-zPS" firstAttribute="top" secondItem="3uN-sH-blo" secondAttribute="top" id="evU-Oy-h6X"/>
                             <constraint firstAttribute="bottom" secondItem="HRt-IW-zPS" secondAttribute="bottom" id="kIO-0W-Tao"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="EAO-B3-Z4n"/>
                     </view>
                     <connections>
                         <outlet property="gridCollectionView" destination="HRt-IW-zPS" id="GE5-bu-tIc"/>

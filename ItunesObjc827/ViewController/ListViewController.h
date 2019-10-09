@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
-
+@property (strong, nonatomic) ViewModel * viewModel;
 @end
 
 NS_ASSUME_NONNULL_END

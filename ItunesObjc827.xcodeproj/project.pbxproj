@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042239AC234E68E500F00DD2 /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 042239AB234E68E500F00DD2 /* CacheManager.m */; };
 		046C7D82234D227A00DCE447 /* ItuneService.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C7D81234D227A00DCE447 /* ItuneService.m */; };
 		04EB0702234BC3C200517EA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB0701234BC3C200517EA1 /* AppDelegate.m */; };
 		04EB0705234BC3C200517EA1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB0704234BC3C200517EA1 /* StartViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042239AA234E68E500F00DD2 /* CacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		042239AB234E68E500F00DD2 /* CacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		046C7D80234D227A00DCE447 /* ItuneService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItuneService.h; sourceTree = "<group>"; };
 		046C7D81234D227A00DCE447 /* ItuneService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItuneService.m; sourceTree = "<group>"; };
 		04EB06FD234BC3C200517EA1 /* ItunesObjc827.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesObjc827.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +134,8 @@
 			children = (
 				046C7D80234D227A00DCE447 /* ItuneService.h */,
 				046C7D81234D227A00DCE447 /* ItuneService.m */,
+				042239AA234E68E500F00DD2 /* CacheManager.h */,
+				042239AB234E68E500F00DD2 /* CacheManager.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				04EB0705234BC3C200517EA1 /* StartViewController.m in Sources */,
 				04EB072B234BCEB900517EA1 /* ViewModel.m in Sources */,
 				04EB0728234BC9DC00517EA1 /* AlbumCollectionCell.m in Sources */,
+				042239AC234E68E500F00DD2 /* CacheManager.m in Sources */,
 				04EB0710234BC3C300517EA1 /* main.m in Sources */,
 				04EB0722234BC60900517EA1 /* GridViewController.m in Sources */,
 				04EB072E234BCECF00517EA1 /* Album.m in Sources */,

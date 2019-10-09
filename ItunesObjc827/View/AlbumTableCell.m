@@ -7,6 +7,7 @@
 //
 
 #import "AlbumTableCell.h"
+#import "CacheManager.h"
 
 @implementation AlbumTableCell
 
@@ -14,8 +15,17 @@
     return @"AlbumTableCell";
 }
 
--(void)configureWith:(NSString*) album {
+-(void)configureWith:(Album*) album {
     
+    [CacheManager.sharedInstance downloadFrom:album.artworkUrl completion:^(NSData * data) {
+        if (data) {
+            UIImage * image = [UIImage imageWithData:data];
+            self.albumImage.image = image;
+        }
+    }];
+    
+    self.albumMainLabel.text = album.name;
+    self.albumSubLabel.text = album.artist;
 }
 
 @end

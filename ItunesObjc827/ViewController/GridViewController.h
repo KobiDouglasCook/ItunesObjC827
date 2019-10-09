@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GridViewController : UIViewController<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
-
-
+@property (strong, nonatomic) ViewModel * viewModel;
 
 
 @end

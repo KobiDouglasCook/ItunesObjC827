@@ -16,6 +16,7 @@
     [ItuneService.sharedInstance getAlbumsFor:artistName completion:^(NSMutableArray<Album *> * _Nonnull albums) {
         __weak ViewModel * weakSelf; //[weak self] - capture list of weak self - Swift
         weakSelf.albums = albums;
+        [NSNotificationCenter.defaultCenter postNotificationName:@"AlbumUpdate" object:nil];
         NSLog(@"Album Count: %lu", albums.count);
     }];
 }

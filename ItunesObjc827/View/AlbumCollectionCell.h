@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Album.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSString*)identifier;
 
--(void)configureWith:(NSString*) album;
+-(void)configureWith:(Album*) album;
 
 @end
 

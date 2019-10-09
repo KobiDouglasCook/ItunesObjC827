@@ -8,12 +8,10 @@
 
 #import "ListViewController.h"
 #import "AlbumTableCell.h"
-#import "ViewModel.h"
 
 @interface ListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
-@property (strong, nonatomic) ViewModel * viewModel;
 
 
 @end
@@ -22,22 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-    [self.listTableView setBackgroundColor: UIColor.blueColor];
+    [self setupList];
+}
+
+-(void)setupList {
+    
+    [NSNotificationCenter.defaultCenter addObserverForName:@"AlbumUpdate" object:nil queue: NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        [self.listTableView reloadData];
+    }];
+    
+    
 }
 
 
 //MARK: List TableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.viewModel.albums.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AlbumTableCell* cell = [tableView dequeueReusableCellWithIdentifier: [AlbumTableCell identifier]  forIndexPath:indexPath]; //let cell = tableView.dequeReusableCell(with identifier: indexPath: ) as! AlbumTableCell
     
-    //TODO: Configure TableCell
-    
+    Album * album = self.viewModel.albums[indexPath.row];
+    [cell configureWith:album];
     
     return cell;
 }

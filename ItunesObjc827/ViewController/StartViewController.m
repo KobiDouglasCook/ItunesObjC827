@@ -7,6 +7,9 @@
 //
 
 #import "StartViewController.h"
+#import "ListViewController.h"
+#import "GridViewController.h"
+
 
 @interface StartViewController ()
 
@@ -19,8 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupStart];
-    //TODO: Add Search Bar & Dependency Injection for ViewModel
+    //TODO: Add Search Bar
+    //TODO: Find better place to init ViewModel
 }
 
 - (IBAction)switchButtonTapped:(id)sender {
@@ -31,6 +34,20 @@
 -(void)setupStart {
     self.viewModel = [ViewModel new]; //var viewModel = ViewModel()
     [self.viewModel getAlbums:@"Michael+Jackson"];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier  isEqual: @"ListSegue"]) {
+        ListViewController * listVC = segue.destinationViewController;
+        listVC.viewModel = self.viewModel;
+    }
+    
+    
+    if ([segue.identifier  isEqual: @"GridSegue"]) {
+        GridViewController * gridVC = segue.destinationViewController;
+        gridVC.viewModel = self.viewModel;
+    }
 }
 
 

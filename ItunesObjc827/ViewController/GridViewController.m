@@ -13,7 +13,7 @@
 @interface GridViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *gridCollectionView;
-@property (strong, nonatomic) ViewModel * viewModel;
+
 
 @end
 
@@ -21,21 +21,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    [self.gridCollectionView setBackgroundColor: UIColor.redColor];
+    [self setupGrid];
+}
+
+-(void)setupGrid {
+    
+    [NSNotificationCenter.defaultCenter addObserverForName:@"AlbumUpdate" object:nil queue: NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        [self.gridCollectionView reloadData];
+    }];
 }
 
 
 //MARK: Grid CollectionView
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    return self.viewModel.albums.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AlbumCollectionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AlbumCollectionCell identifier] forIndexPath:indexPath];
     
-    //TODO: Configure CollectionCell
+    Album * album = self.viewModel.albums[indexPath.row];
+    [cell configureWith:album];
     
     return cell;
     

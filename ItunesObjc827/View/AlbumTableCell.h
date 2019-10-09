@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Album.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *albumSubLabel;
 
 +(NSString*)identifier; //static func identifier() -> String
--(void)configureWith:(NSString*)album;
+-(void)configureWith:(Album*)album;
 
 @end
 
