@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //TODO: Add Search Bar
-    //TODO: Find better place to init ViewModel
 }
 
 - (IBAction)switchButtonTapped:(id)sender {
@@ -37,13 +36,14 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+
     if ([segue.identifier  isEqual: @"ListSegue"]) {
+        [self setupStart];
         ListViewController * listVC = segue.destinationViewController;
         listVC.viewModel = self.viewModel;
     }
-    
-    
+
+
     if ([segue.identifier  isEqual: @"GridSegue"]) {
         GridViewController * gridVC = segue.destinationViewController;
         gridVC.viewModel = self.viewModel;

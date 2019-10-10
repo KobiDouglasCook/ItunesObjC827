@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * artist;
 @property (nonatomic, strong) NSString * artworkUrl;
+@property (nonatomic, strong) NSString * url;
 @property (nonatomic) int uid;
 @property (nonatomic) double price;
 

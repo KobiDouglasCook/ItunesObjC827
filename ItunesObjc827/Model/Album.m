@@ -17,6 +17,7 @@
         NSString *name = [dict objectForKey:@"collectionName"];
         NSString *artwork = [dict objectForKey:@"artworkUrl100"];
         NSString *artist = [dict objectForKey:@"artistName"];
+        NSString *url = [dict objectForKey:@"artistViewUrl"];
         int collectionId = [[dict objectForKey: @"collectionId"] intValue];
         double price = [[dict objectForKey: @"collectionPrice"] doubleValue];
         
@@ -25,6 +26,7 @@
         self.artist = artist;
         self.uid = collectionId;
         self.price = price;
+        self.url = url;
         
     }
     

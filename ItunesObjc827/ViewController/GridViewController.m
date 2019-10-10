@@ -9,6 +9,7 @@
 #import "GridViewController.h"
 #import "AlbumCollectionCell.h"
 #import "ViewModel.h"
+#import "ItunesObjc827-Swift.h"
 
 @interface GridViewController ()
 
@@ -25,7 +26,7 @@
 }
 
 -(void)setupGrid {
-    
+
     [NSNotificationCenter.defaultCenter addObserverForName:@"AlbumUpdate" object:nil queue: NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
         [self.gridCollectionView reloadData];
     }];
@@ -49,14 +50,19 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    double width = self.view.frame.size.width / 3;
+    double width = (self.view.frame.size.width - 15) / 3;
     return CGSizeMake(width, width);
 }
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 5;
+}
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
+    Album * album = self.viewModel.albums[indexPath.row];
+    WebViewController * webVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
+    webVC.album = album;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 

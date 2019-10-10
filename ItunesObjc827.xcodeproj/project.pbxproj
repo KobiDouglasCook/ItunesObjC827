@@ -21,6 +21,7 @@
 		04EB0728234BC9DC00517EA1 /* AlbumCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB0727234BC9DC00517EA1 /* AlbumCollectionCell.m */; };
 		04EB072B234BCEB900517EA1 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB072A234BCEB900517EA1 /* ViewModel.m */; };
 		04EB072E234BCECF00517EA1 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB072D234BCECF00517EA1 /* Album.m */; };
+		04F72477234FC1AA00BFDF38 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72476234FC1AA00BFDF38 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		04EB072C234BCECF00517EA1 /* Album.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		04EB072D234BCECF00517EA1 /* Album.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		04EB072F234BCF8F00517EA1 /* ViewModelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModelDelegate.h; sourceTree = "<group>"; };
+		04F72475234FC1A900BFDF38 /* ItunesObjc827-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ItunesObjc827-Bridging-Header.h"; sourceTree = "<group>"; };
+		04F72476234FC1AA00BFDF38 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 		04EB071A234BC3E800517EA1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				04F72475234FC1A900BFDF38 /* ItunesObjc827-Bridging-Header.h */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -165,6 +169,7 @@
 				04EB071E234BC60200517EA1 /* ListViewController.m */,
 				04EB0720234BC60900517EA1 /* GridViewController.h */,
 				04EB0721234BC60900517EA1 /* GridViewController.m */,
+				04F72476234FC1AA00BFDF38 /* WebViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				TargetAttributes = {
 					04EB06FC234BC3C200517EA1 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -246,6 +252,7 @@
 				042239AC234E68E500F00DD2 /* CacheManager.m in Sources */,
 				04EB0710234BC3C300517EA1 /* main.m in Sources */,
 				04EB0722234BC60900517EA1 /* GridViewController.m in Sources */,
+				04F72477234FC1AA00BFDF38 /* WebViewController.swift in Sources */,
 				04EB072E234BCECF00517EA1 /* Album.m in Sources */,
 				046C7D82234D227A00DCE447 /* ItuneService.m in Sources */,
 				04EB071F234BC60200517EA1 /* ListViewController.m in Sources */,
@@ -391,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TAXQKHCB7;
 				INFOPLIST_FILE = ItunesObjc827/Info.plist;
@@ -400,6 +408,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mac.ItunesObjc827;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ItunesObjc827/Extension/ItunesObjc827-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -408,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TAXQKHCB7;
 				INFOPLIST_FILE = ItunesObjc827/Info.plist;
@@ -417,6 +429,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mac.ItunesObjc827;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ItunesObjc827/Extension/ItunesObjc827-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import "AlbumTableCell.h"
+#import "ItunesObjc827-Swift.h"
 
 @interface ListViewController ()
 
@@ -28,7 +29,6 @@
     [NSNotificationCenter.defaultCenter addObserverForName:@"AlbumUpdate" object:nil queue: NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
         [self.listTableView reloadData];
     }];
-    
     
 }
 
@@ -53,8 +53,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Album * album = self.viewModel.albums[indexPath.row];
+    WebViewController * webVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
+    webVC.album = album;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 @end

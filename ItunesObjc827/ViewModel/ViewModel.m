@@ -13,11 +13,13 @@
 
 
 - (void)getAlbums:(NSString*) artistName {
-    [ItuneService.sharedInstance getAlbumsFor:artistName completion:^(NSMutableArray<Album *> * _Nonnull albums) {
-        __weak ViewModel * weakSelf; //[weak self] - capture list of weak self - Swift
-        weakSelf.albums = albums;
+    [ItuneService.sharedInstance getAlbumsFor:artistName completion:^(NSMutableArray<Album *> * _Nonnull albms) {
+        
+        __weak ViewModel * weakSelf = self; //[weak self] - capture list of weak self - Swift
+        weakSelf.albums = albms;
+
         [NSNotificationCenter.defaultCenter postNotificationName:@"AlbumUpdate" object:nil];
-        NSLog(@"Album Count: %lu", albums.count);
+        NSLog(@"Album Count: %lu", albms.count);
     }];
 }
 

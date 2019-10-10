@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewModel.h"
+@class WebViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 
